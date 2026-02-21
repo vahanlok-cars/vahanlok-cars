@@ -1,11 +1,11 @@
 // WhatsApp configuration — update WHATSAPP_NUMBER to change the sales agent number
-export const WHATSAPP_NUMBER = "919987057317"; // +91-9987057317
+export const WHATSAPP_NUMBER = "919930503688"; // +91-9930503688
 
 export const BUSINESS = {
   name: "AB Cars",
   tagline: "Find Your Perfect Ride",
   location: "Mumbai, Maharashtra",
-  phone: "+91-99870 57317",
+  phone: "+91-99305 03688",
   email: "info@abcars.in",
 } as const;
 

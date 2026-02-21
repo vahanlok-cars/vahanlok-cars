@@ -58,7 +58,7 @@ export default function LeadForm({ carModel }: LeadFormProps) {
 
   function onSubmit(data: FormData) {
     const lines = [
-      "🚗 New Lead from AB Cars Website",
+      "Hello AB Cars! I have an enquiry regarding a car. Here are my details:",
       "",
       `Car Interested In: ${data.carModel}`,
       `Name: ${data.name}`,
@@ -88,11 +88,11 @@ export default function LeadForm({ carModel }: LeadFormProps) {
     return (
       <div className="bg-amber-50 border border-amber-200 rounded-xl p-6 text-center space-y-4">
         <div className="text-amber-600 text-4xl">📎</div>
-        <h3 className="font-semibold text-[#1A1A1A] text-lg">
-          One more step!
-        </h3>
+        <h3 className="font-semibold text-[#1A1A1A] text-lg">One more step!</h3>
         <p className="text-gray-600 text-sm leading-relaxed">
-          WhatsApp has opened with your enquiry. Please <strong>attach your quotation image</strong> in the chat that just opened.
+          WhatsApp has opened with your enquiry. Please{" "}
+          <strong>attach your quotation image</strong> in the chat that just
+          opened.
         </p>
         <button
           onClick={() => {

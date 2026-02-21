@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight, Shield, Award, Users, Car } from "lucide-react";
 import { getAllCars } from "@/lib/cars";
 import CarCard from "@/components/CarCard";
+import { Button } from "@/components/ui/button";
+import { buildWhatsAppUrl } from "@/lib/config";
 
 export default function HomePage() {
   const allCars = getAllCars();
@@ -31,21 +35,25 @@ export default function HomePage() {
               our team via WhatsApp for instant quotes and zero hassle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/cars"
-                className="inline-flex items-center justify-center gap-2 bg-[#D72828] hover:bg-[#b82020] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-base"
-              >
-                Browse All Cars
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-              <a
-                href="https://wa.me/919987057317?text=Hi%20AB%20Cars!%20I'm%20interested%20in%20buying%20a%20car."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bc5a] text-white font-semibold px-8 py-4 rounded-xl transition-colors text-base"
+              <Button size="lg" asChild>
+                <Link href="/cars">
+                  Browse All Cars
+                  <ArrowRight className="h-5 w-5" />
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => {
+                  const url = buildWhatsAppUrl(
+                    "Hi AB Cars! I'm interested in buying a car",
+                  );
+
+                  window.open(url, "_blank");
+                }}
               >
                 Get Best Deal on WhatsApp
-              </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -62,8 +70,12 @@ export default function HomePage() {
               <span className="inline-block bg-[#D72828]/10 text-[#D72828] text-xs font-semibold px-2.5 py-1 rounded-full mb-3">
                 {newCars.length} Cars Available
               </span>
-              <h2 className="text-xl font-bold text-[#1A1A1A] mb-1">New Cars</h2>
-              <p className="text-gray-500 text-sm">Latest models with full warranty</p>
+              <h2 className="text-xl font-bold text-[#1A1A1A] mb-1">
+                New Cars
+              </h2>
+              <p className="text-gray-500 text-sm">
+                Latest models with full warranty
+              </p>
             </div>
             <div className="flex items-center gap-2 text-[#D72828] font-medium text-sm group-hover:gap-3 transition-all">
               Explore
@@ -79,8 +91,12 @@ export default function HomePage() {
               <span className="inline-block bg-gray-100 text-gray-700 text-xs font-semibold px-2.5 py-1 rounded-full mb-3">
                 {preOwnedCars.length} Cars Available
               </span>
-              <h2 className="text-xl font-bold text-[#1A1A1A] mb-1">Pre-Owned Cars</h2>
-              <p className="text-gray-500 text-sm">Certified, inspected &amp; great value</p>
+              <h2 className="text-xl font-bold text-[#1A1A1A] mb-1">
+                Pre-Owned Cars
+              </h2>
+              <p className="text-gray-500 text-sm">
+                Certified, inspected &amp; great value
+              </p>
             </div>
             <div className="flex items-center gap-2 text-[#1A1A1A] font-medium text-sm group-hover:gap-3 transition-all">
               Explore
@@ -94,14 +110,35 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            { icon: <Car className="h-6 w-6 text-[#D72828]" />, value: `${allCars.length}+`, label: "Cars in Stock" },
-            { icon: <Users className="h-6 w-6 text-[#D72828]" />, value: "1,200+", label: "Happy Customers" },
-            { icon: <Award className="h-6 w-6 text-[#D72828]" />, value: "8+", label: "Years in Business" },
-            { icon: <Shield className="h-6 w-6 text-[#D72828]" />, value: "100%", label: "Verified Listings" },
+            {
+              icon: <Car className="h-6 w-6 text-[#D72828]" />,
+              value: `${allCars.length}+`,
+              label: "Cars in Stock",
+            },
+            {
+              icon: <Users className="h-6 w-6 text-[#D72828]" />,
+              value: "1,200+",
+              label: "Happy Customers",
+            },
+            {
+              icon: <Award className="h-6 w-6 text-[#D72828]" />,
+              value: "8+",
+              label: "Years in Business",
+            },
+            {
+              icon: <Shield className="h-6 w-6 text-[#D72828]" />,
+              value: "100%",
+              label: "Verified Listings",
+            },
           ].map((stat) => (
-            <div key={stat.label} className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm">
+            <div
+              key={stat.label}
+              className="bg-white border border-gray-100 rounded-2xl p-6 text-center shadow-sm"
+            >
               <div className="flex justify-center mb-3">{stat.icon}</div>
-              <p className="text-3xl font-bold text-[#1A1A1A] mb-1">{stat.value}</p>
+              <p className="text-3xl font-bold text-[#1A1A1A] mb-1">
+                {stat.value}
+              </p>
               <p className="text-sm text-gray-500">{stat.label}</p>
             </div>
           ))}
@@ -112,10 +149,17 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A]">Featured Cars</h2>
-            <p className="text-gray-500 mt-1 text-sm">Hand-picked deals just for you</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A]">
+              Featured Cars
+            </h2>
+            <p className="text-gray-500 mt-1 text-sm">
+              Hand-picked deals just for you
+            </p>
           </div>
-          <Link href="/cars" className="text-[#D72828] font-medium text-sm flex items-center gap-1 hover:gap-2 transition-all">
+          <Link
+            href="/cars"
+            className="text-[#D72828] font-medium text-sm flex items-center gap-1 hover:gap-2 transition-all"
+          >
             View all <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
@@ -142,14 +186,30 @@ export default function HomePage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {[
-              { title: "Transparent Pricing", desc: "No hidden charges. The price you see is what you pay. We also help you beat dealer quotes.", emoji: "💯" },
-              { title: "Instant WhatsApp Support", desc: "Our sales team responds within minutes on WhatsApp. Get quotes, schedule test drives, and close deals fast.", emoji: "⚡" },
-              { title: "Verified Inventory", desc: "Every pre-owned car is thoroughly inspected. All documents are clear and ready for RC transfer.", emoji: "✅" },
+              {
+                title: "Transparent Pricing",
+                desc: "No hidden charges. The price you see is what you pay. We also help you beat dealer quotes.",
+                emoji: "💯",
+              },
+              {
+                title: "Instant WhatsApp Support",
+                desc: "Our sales team responds within minutes on WhatsApp. Get quotes, schedule test drives, and close deals fast.",
+                emoji: "⚡",
+              },
+              {
+                title: "Verified Inventory",
+                desc: "Every pre-owned car is thoroughly inspected. All documents are clear and ready for RC transfer.",
+                emoji: "✅",
+              },
             ].map((item) => (
               <div key={item.title} className="text-center px-4">
                 <div className="text-4xl mb-4">{item.emoji}</div>
-                <h3 className="font-semibold text-[#1A1A1A] text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-semibold text-[#1A1A1A] text-lg mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
