@@ -43,6 +43,7 @@ export default function LeadForm({ carModel }: LeadFormProps) {
     },
   });
 
+  // eslint-disable-next-line react-hooks/incompatible-library
   const hasQuotation = watch("hasQuotation");
 
   function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
