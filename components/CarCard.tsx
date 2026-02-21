@@ -1,0 +1,86 @@
+import Image from "next/image";
+import Link from "next/link";
+import { Fuel, Gauge, Settings2 } from "lucide-react";
+import type { Car } from "@/lib/types";
+import { formatPrice, formatKm } from "@/lib/types";
+
+interface CarCardProps {
+  car: Car;
+}
+
+export default function CarCard({ car }: CarCardProps) {
+  const mainImage = car.images[0] ?? "/cars/placeholder.jpg";
+  const isNew = car.type === "new";
+
+  return (
+    <div className="group bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-200">
+      {/* Image */}
+      <Link href={`/cars/${car.id}`} className="block relative aspect-video overflow-hidden bg-gray-50">
+        <Image
+          src={mainImage}
+          alt={`${car.brand} ${car.model}`}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
+        {/* Type badge */}
+        <span
+          className={`absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full ${
+            isNew
+              ? "bg-[#D72828] text-white"
+              : "bg-[#1A1A1A] text-white"
+          }`}
+        >
+          {isNew ? "NEW" : "PRE-OWNED"}
+        </span>
+      </Link>
+
+      {/* Content */}
+      <div className="p-4">
+        {/* Name & year */}
+        <div className="flex items-start justify-between gap-2 mb-1">
+          <Link href={`/cars/${car.id}`}>
+            <h3 className="font-semibold text-[#1A1A1A] text-base leading-tight hover:text-[#D72828] transition-colors">
+              {car.brand} {car.model}
+            </h3>
+          </Link>
+          <span className="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full shrink-0">
+            {car.year}
+          </span>
+        </div>
+
+        {/* Specs row */}
+        <div className="flex items-center gap-4 my-3 text-xs text-gray-500">
+          <span className="flex items-center gap-1">
+            <Fuel className="h-3.5 w-3.5" />
+            {car.fuelType}
+          </span>
+          {car.kmDriven !== undefined ? (
+            <span className="flex items-center gap-1">
+              <Gauge className="h-3.5 w-3.5" />
+              {formatKm(car.kmDriven)}
+            </span>
+          ) : null}
+          <span className="flex items-center gap-1">
+            <Settings2 className="h-3.5 w-3.5" />
+            {car.transmission}
+          </span>
+        </div>
+
+        {/* Price */}
+        <p className="text-lg font-bold text-[#D72828] mb-4">
+          {formatPrice(car.price)}
+        </p>
+
+        {/* CTA */}
+        <Link
+          href={`/cars/${car.id}`}
+          className="block w-full text-center bg-[#D72828] hover:bg-[#b82020] text-white text-sm font-semibold py-2.5 rounded-lg transition-colors"
+        >
+          Get Best Deal
+        </Link>
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,87 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import type { Car } from "@/lib/types";
+import FilterBar, { type FilterState } from "@/components/FilterBar";
+import CarCard from "@/components/CarCard";
+import { SlidersHorizontal } from "lucide-react";
+
+interface CarsClientProps {
+  initialCars: Car[];
+  initialType?: string;
+}
+
+export default function CarsClient({ initialCars, initialType }: CarsClientProps) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const [filters, setFilters] = useState<FilterState>({
+    type: (initialType as FilterState["type"]) ?? "all",
+    brand: searchParams.get("brand") ?? "",
+    fuelType: searchParams.get("fuel") ?? "",
+    budgetMax: searchParams.get("budget") ? Number(searchParams.get("budget")) : null,
+  });
+
+  // Sync URL to filters on mount
+  useEffect(() => {
+    const type = searchParams.get("type") as FilterState["type"] | null;
+    if (type && type !== filters.type) {
+      setFilters((prev) => ({ ...prev, type: type ?? "all" }));
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function handleFilterChange(newFilters: FilterState) {
+    setFilters(newFilters);
+    const params = new URLSearchParams();
+    if (newFilters.type !== "all") params.set("type", newFilters.type);
+    if (newFilters.brand) params.set("brand", newFilters.brand);
+    if (newFilters.fuelType) params.set("fuel", newFilters.fuelType);
+    if (newFilters.budgetMax) params.set("budget", String(newFilters.budgetMax));
+    const query = params.toString();
+    router.replace(query ? `/cars?${query}` : "/cars", { scroll: false });
+  }
+
+  const filtered = initialCars.filter((car) => {
+    if (filters.type !== "all" && car.type !== filters.type) return false;
+    if (filters.brand && car.brand !== filters.brand) return false;
+    if (filters.fuelType && car.fuelType !== filters.fuelType) return false;
+    if (filters.budgetMax !== null && car.price !== null && car.price > filters.budgetMax) return false;
+    return true;
+  });
+
+  return (
+    <div className="space-y-6">
+      <FilterBar
+        onFilterChange={handleFilterChange}
+        initialFilters={filters}
+      />
+
+      {/* Results count */}
+      <div className="flex items-center justify-between">
+        <p className="text-sm text-gray-500">
+          Showing <span className="font-semibold text-[#1A1A1A]">{filtered.length}</span> car{filtered.length !== 1 ? "s" : ""}
+          {filters.type !== "all" && (
+            <span> · {filters.type === "new" ? "New" : "Pre-Owned"}</span>
+          )}
+        </p>
+      </div>
+
+      {/* Grid */}
+      {filtered.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map((car) => (
+            <CarCard key={car.id} car={car} />
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-20">
+          <SlidersHorizontal className="h-12 w-12 text-gray-200 mx-auto mb-4" />
+          <h3 className="font-semibold text-[#1A1A1A] text-lg mb-2">No cars found</h3>
+          <p className="text-gray-500 text-sm">Try adjusting your filters to see more results.</p>
+        </div>
+      )}
+    </div>
+  );
+}

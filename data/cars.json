@@ -1,0 +1,414 @@
+[
+  {
+    "id": "maruti-swift-2024-new",
+    "type": "new",
+    "brand": "Maruti Suzuki",
+    "model": "Swift ZXi+",
+    "year": 2024,
+    "price": 899000,
+    "fuelType": "Petrol",
+    "transmission": "AMT",
+    "color": "Pearl Arctic White",
+    "images": [
+      "/cars/MARUTI%20SUZUKI/SWIFT/swiftswiftfrontview.webp",
+      "/cars/MARUTI%20SUZUKI/SWIFT/swiftswiftleftsideview.webp",
+      "/cars/MARUTI%20SUZUKI/SWIFT/swiftswiftrearview.webp",
+      "/cars/MARUTI%20SUZUKI/SWIFT/swiftmarutisuzukiswiftrightsideview.webp",
+      "/cars/MARUTI%20SUZUKI/SWIFT/swiftmarutisuzukiswiftsteeringwheel.webp"
+    ],
+    "features": [
+      "SmartPlay Pro+ infotainment with 9-inch touchscreen",
+      "360-degree camera",
+      "Cruise control",
+      "6 airbags",
+      "Automatic climate control",
+      "Wireless Apple CarPlay & Android Auto",
+      "Rear AC vents",
+      "Keyless entry & push-button start"
+    ],
+    "specs": {
+      "engine": "1.2L K-Series DualJet",
+      "seating": 5,
+      "mileage": "24.8 km/l",
+      "bootSpace": "268 litres"
+    }
+  },
+  {
+    "id": "hyundai-creta-2024-new",
+    "type": "new",
+    "brand": "Hyundai",
+    "model": "Creta SX(O)",
+    "year": 2024,
+    "price": 1895000,
+    "fuelType": "Petrol",
+    "transmission": "CVT",
+    "color": "Abyss Black Pearl",
+    "images": [
+      "/cars/HYUNDAI/CRETA/cretacretafrontview.webp",
+      "/cars/HYUNDAI/CRETA/cretacretaleftsideview.webp",
+      "/cars/HYUNDAI/CRETA/cretacretarearview.webp",
+      "/cars/HYUNDAI/CRETA/cretahyundaicretarightsideview.webp",
+      "/cars/HYUNDAI/CRETA/cretahyundaicretadashboard.webp"
+    ],
+    "features": [
+      "10.25-inch infotainment with 10.25-inch digital cluster",
+      "Panoramic sunroof",
+      "ADAS Level 2 safety suite",
+      "360-degree camera",
+      "Ventilated front seats",
+      "Bose 8-speaker premium audio",
+      "Wireless charging",
+      "BlueLink connected car tech"
+    ],
+    "specs": {
+      "engine": "1.5L Gamma II MPi",
+      "seating": 5,
+      "mileage": "17.4 km/l",
+      "bootSpace": "433 litres"
+    }
+  },
+  {
+    "id": "tata-nexon-ev-2024-new",
+    "type": "new",
+    "brand": "Tata",
+    "model": "Nexon EV MAX LR",
+    "year": 2024,
+    "price": 1995000,
+    "fuelType": "Electric",
+    "transmission": "Automatic",
+    "color": "Fearless Red",
+    "images": [
+      "/cars/TATA/NEXON%20EV/nexonevnexonevfrontview.webp",
+      "/cars/TATA/NEXON%20EV/nexonevnexonevleftsideview.webp",
+      "/cars/TATA/NEXON%20EV/nexonevnexonevrearview.webp",
+      "/cars/TATA/NEXON%20EV/nexonevtatanexonevfaceliftrightsideview19.webp",
+      "/cars/TATA/NEXON%20EV/nexonevtatanexonevdashboard.webp"
+    ],
+    "features": [
+      "Range: 465 km (MIDC certified)",
+      "10.25-inch infotainment with connected tech",
+      "Wireless charging",
+      "360-degree camera",
+      "Ventilated seats",
+      "6 airbags",
+      "ADAS safety features",
+      "Free AC fast charging support"
+    ],
+    "specs": {
+      "engine": "40.5 kWh battery pack",
+      "seating": 5,
+      "mileage": "465 km range",
+      "bootSpace": "350 litres"
+    }
+  },
+  {
+    "id": "honda-amaze-2024-new",
+    "type": "new",
+    "brand": "Honda",
+    "model": "Amaze VX CVT",
+    "year": 2024,
+    "price": 1085000,
+    "fuelType": "Petrol",
+    "transmission": "CVT",
+    "color": "Radiant Red Metallic",
+    "images": [
+      "/cars/HONDA/AMAZE/amazehondaamazefrontview.webp",
+      "/cars/HONDA/AMAZE/amazehondaamazeleftsideview.webp",
+      "/cars/HONDA/AMAZE/amazeamazerearview.webp",
+      "/cars/HONDA/AMAZE/amazeamazerightsideview.webp",
+      "/cars/HONDA/AMAZE/amazehondaamazedashboard.webp"
+    ],
+    "features": [
+      "8-inch Honda Sensing infotainment",
+      "Honda Sensing safety suite (ADAS)",
+      "Wireless Apple CarPlay & Android Auto",
+      "6 airbags",
+      "Rear parking camera",
+      "Keyless entry & push-button start",
+      "Electric sunroof",
+      "Auto climate control"
+    ],
+    "specs": {
+      "engine": "1.2L i-VTEC",
+      "seating": 5,
+      "mileage": "18.6 km/l",
+      "bootSpace": "420 litres"
+    }
+  },
+  {
+    "id": "kia-seltos-2024-new",
+    "type": "new",
+    "brand": "Kia",
+    "model": "Seltos HTX 6MT",
+    "year": 2024,
+    "price": 1549000,
+    "fuelType": "Petrol",
+    "transmission": "Manual",
+    "color": "Imperial Blue",
+    "images": [
+      "/cars/KIA/SELTOS/seltosnewseltosfrontview.webp",
+      "/cars/KIA/SELTOS/seltoskianewseltosleftsideview.webp",
+      "/cars/KIA/SELTOS/seltosnewseltosrearview.webp",
+      "/cars/KIA/SELTOS/seltoskianewseltosrightsideview.webp",
+      "/cars/KIA/SELTOS/seltoskianewseltosdashboard.webp"
+    ],
+    "features": [
+      "10.25-inch curved infotainment + cluster",
+      "Panoramic sunroof",
+      "Bose 8-speaker audio",
+      "360-degree camera",
+      "ADAS Level 2",
+      "Connected car tech",
+      "Ambient lighting",
+      "Wireless charging"
+    ],
+    "specs": {
+      "engine": "1.5L Smartstream MPi",
+      "seating": 5,
+      "mileage": "16.5 km/l",
+      "bootSpace": "433 litres"
+    }
+  },
+  {
+    "id": "mg-hector-2024-new",
+    "type": "new",
+    "brand": "MG",
+    "model": "Hector Plus Sharp Pro",
+    "year": 2024,
+    "price": 1999000,
+    "fuelType": "Petrol",
+    "transmission": "CVT",
+    "color": "Starry Black",
+    "images": [
+      "/cars/MG/HECTOR%20PLUS/hectorplushectorplusfrontview.webp",
+      "/cars/MG/HECTOR%20PLUS/hectorplushectorplusleftfrontthreequarter.webp",
+      "/cars/MG/HECTOR%20PLUS/hectorplushectorplusrightsideview.webp",
+      "/cars/MG/HECTOR%20PLUS/hectorplushectorplusdashboard.webp"
+    ],
+    "features": [
+      "14-inch portrait infotainment",
+      "i-SMART 2.0 connected tech",
+      "Advanced ADAS",
+      "Panoramic sunroof",
+      "6 airbags",
+      "360-degree camera",
+      "Heated & ventilated seats",
+      "Wireless Apple CarPlay"
+    ],
+    "specs": {
+      "engine": "1.5L Turbo Petrol",
+      "seating": 5,
+      "mileage": "15.8 km/l",
+      "bootSpace": "587 litres"
+    }
+  },
+  {
+    "id": "maruti-dzire-2022-preowned",
+    "type": "pre-owned",
+    "brand": "Maruti Suzuki",
+    "model": "Dzire ZXi",
+    "year": 2022,
+    "price": 795000,
+    "fuelType": "Petrol",
+    "transmission": "Automatic",
+    "kmDriven": 28500,
+    "color": "Oxford Blue",
+    "images": [
+      "/cars/MARUTI%20SUZUKI/DZIRE/dziredzirefrontview.webp",
+      "/cars/MARUTI%20SUZUKI/DZIRE/dziredzireleftsideview.webp",
+      "/cars/MARUTI%20SUZUKI/DZIRE/dziredzirerearview.webp",
+      "/cars/MARUTI%20SUZUKI/DZIRE/dziremarutisuzukidzirerightsideview.webp",
+      "/cars/MARUTI%20SUZUKI/DZIRE/dziremarutisuzukidziredashboard.webp"
+    ],
+    "features": [
+      "SmartPlay Studio 7-inch infotainment",
+      "Apple CarPlay & Android Auto",
+      "Rear parking sensor & camera",
+      "Auto climate control",
+      "Keyless entry & push-button start",
+      "Electrically adjustable ORVM",
+      "Single owner, full service history",
+      "Insurance valid till Dec 2025"
+    ],
+    "specs": {
+      "engine": "1.2L K-Series DualJet",
+      "seating": 5,
+      "mileage": "23.26 km/l",
+      "bootSpace": "378 litres"
+    }
+  },
+  {
+    "id": "hyundai-venue-2021-preowned",
+    "type": "pre-owned",
+    "brand": "Hyundai",
+    "model": "Venue SX Plus DCT",
+    "year": 2021,
+    "price": 985000,
+    "fuelType": "Petrol",
+    "transmission": "DCT",
+    "kmDriven": 42000,
+    "color": "Polar White",
+    "images": [
+      "/cars/HYUNDAI/VENUE/venuehyundaivenuefrontview.webp",
+      "/cars/HYUNDAI/VENUE/venuehyundaivenueleftsideview.webp",
+      "/cars/HYUNDAI/VENUE/venuevenuerearview.webp",
+      "/cars/HYUNDAI/VENUE/venuevenuerightsideview.webp",
+      "/cars/HYUNDAI/VENUE/venuehyundaivenuedashboard.webp"
+    ],
+    "features": [
+      "8-inch infotainment with BlueLink",
+      "Sunroof",
+      "Air purifier",
+      "Wireless Apple CarPlay",
+      "6 airbags",
+      "First owner, non-accidental",
+      "Company maintained",
+      "Insurance renewed till March 2026"
+    ],
+    "specs": {
+      "engine": "1.0L T-GDi Turbo",
+      "seating": 5,
+      "mileage": "18.15 km/l",
+      "bootSpace": "350 litres"
+    }
+  },
+  {
+    "id": "tata-nexon-2020-preowned",
+    "type": "pre-owned",
+    "brand": "Tata",
+    "model": "Nexon XZ+ Diesel",
+    "year": 2020,
+    "price": 875000,
+    "fuelType": "Diesel",
+    "transmission": "Manual",
+    "kmDriven": 58000,
+    "color": "Calgary White",
+    "images": [
+      "/cars/TATA/NEXON/nexon-facelift-exterior-front-view.avif",
+      "/cars/TATA/NEXON/nexon-facelift-exterior-left-side-view.avif",
+      "/cars/TATA/NEXON/nexon-facelift-exterior-rear-view.avif",
+      "/cars/TATA/NEXON/nexon-facelift-exterior-right-front-three-quarter-69.avif",
+      "/cars/TATA/NEXON/nexon-facelift-interior-dashboard.avif"
+    ],
+    "features": [
+      "7-inch Harman infotainment",
+      "Sunroof",
+      "JBL speakers",
+      "Rear parking camera",
+      "4-star NCAP safety",
+      "Single owner, good condition",
+      "All service done at Tata dealer",
+      "Tyres replaced at 45,000 km"
+    ],
+    "specs": {
+      "engine": "1.5L Revotorq Diesel",
+      "seating": 5,
+      "mileage": "21.5 km/l",
+      "bootSpace": "350 litres"
+    }
+  },
+  {
+    "id": "honda-city-2019-preowned",
+    "type": "pre-owned",
+    "brand": "Honda",
+    "model": "City VX CVT",
+    "year": 2019,
+    "price": 895000,
+    "fuelType": "Petrol",
+    "transmission": "CVT",
+    "kmDriven": 62000,
+    "color": "Lunar Silver Metallic",
+    "images": [
+      "/cars/HONDA/CITY/cityhondacityfrontview1.webp",
+      "/cars/HONDA/CITY/cityhondacityleftfrontthreequarter0.webp",
+      "/cars/HONDA/CITY/citycityleftrearthreequarter.webp",
+      "/cars/HONDA/CITY/citycityrearview.webp",
+      "/cars/HONDA/CITY/citycitysteeringwheel.webp"
+    ],
+    "features": [
+      "7-inch Display Audio with Honda Connect",
+      "Apple CarPlay & Android Auto",
+      "Lane watch camera",
+      "Reverse parking camera",
+      "LED headlamps",
+      "First owner, corporate maintained",
+      "All papers clear and updated",
+      "Original paint, no accident history"
+    ],
+    "specs": {
+      "engine": "1.5L i-VTEC",
+      "seating": 5,
+      "mileage": "17.8 km/l",
+      "bootSpace": "506 litres"
+    }
+  },
+  {
+    "id": "toyota-innova-2022-preowned",
+    "type": "pre-owned",
+    "brand": "Toyota",
+    "model": "Innova Crysta GX 7STR",
+    "year": 2022,
+    "price": 1895000,
+    "fuelType": "Diesel",
+    "transmission": "Manual",
+    "kmDriven": 35000,
+    "color": "Silver Metallic",
+    "images": [
+      "/cars/TOYOTA/INNOVA%20CRYSTA/innovacrystainnovacrystafrontview.webp",
+      "/cars/TOYOTA/INNOVA%20CRYSTA/innovacrystainnovacrystaleftfrontthreequarter.webp",
+      "/cars/TOYOTA/INNOVA%20CRYSTA/innovacrystainnovacrystarightfrontthreequarter.webp",
+      "/cars/TOYOTA/INNOVA%20CRYSTA/innovacrystainnovacrystadashboard.webp"
+    ],
+    "features": [
+      "7-seat configuration",
+      "9-inch touchscreen infotainment",
+      "Dual-tone interior",
+      "Roof-mounted AC for rear passengers",
+      "360-degree camera",
+      "Captain seat option in 2nd row",
+      "Single owner, well maintained",
+      "Full dealer service history"
+    ],
+    "specs": {
+      "engine": "2.4L GD Series Diesel",
+      "seating": 7,
+      "mileage": "15.1 km/l",
+      "bootSpace": "300 litres (3rd row folded)"
+    }
+  },
+  {
+    "id": "maruti-ertiga-2023-preowned",
+    "type": "pre-owned",
+    "brand": "Maruti Suzuki",
+    "model": "Ertiga ZXi Plus",
+    "year": 2023,
+    "price": 1150000,
+    "fuelType": "CNG",
+    "transmission": "Manual",
+    "kmDriven": 18000,
+    "color": "Auburn Red Pearl",
+    "images": [
+      "/cars/MARUTI%20SUZUKI/ERTIGA/ertigaertigafrontview.webp",
+      "/cars/MARUTI%20SUZUKI/ERTIGA/ertigaertigaleftsideview.webp",
+      "/cars/MARUTI%20SUZUKI/ERTIGA/ertigaertigarearview.webp",
+      "/cars/MARUTI%20SUZUKI/ERTIGA/ertigamarutisuzukiertigarightsideview.webp",
+      "/cars/MARUTI%20SUZUKI/ERTIGA/ertigamarutisuzukiertigadashboard.webp"
+    ],
+    "features": [
+      "7-seat family MPV",
+      "SmartPlay Pro+ 9-inch infotainment",
+      "Factory-fitted CNG — better resale",
+      "Alloy wheels",
+      "360-degree camera",
+      "Auto climate control",
+      "Keyless entry & push-button start",
+      "Single owner, barely used"
+    ],
+    "specs": {
+      "engine": "1.5L K-Series SHVS + CNG",
+      "seating": 7,
+      "mileage": "26.11 km/kg (CNG)",
+      "bootSpace": "135 litres (all seats up)"
+    }
+  }
+]

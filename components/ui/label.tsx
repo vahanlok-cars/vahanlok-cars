@@ -1,0 +1,28 @@
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
+import { cn } from "@/lib/utils";
+
+// ---------------------------------------------------------------------------
+// Label
+// Wraps Radix UI's accessible label primitive with AB Cars typography.
+// Note: @radix-ui/react-label is listed in package.json and is installed.
+// CVA is intentionally NOT used here to avoid the missing dependency.
+// ---------------------------------------------------------------------------
+
+const Label = React.forwardRef<
+  React.ElementRef<typeof LabelPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
+>(({ className, ...props }, ref) => (
+  <LabelPrimitive.Root
+    ref={ref}
+    className={cn(
+      "text-sm font-medium leading-none text-[#1A1A1A]",
+      "peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+      className
+    )}
+    {...props}
+  />
+));
+Label.displayName = LabelPrimitive.Root.displayName;
+
+export { Label };
