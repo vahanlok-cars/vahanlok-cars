@@ -8,7 +8,7 @@ export interface Car {
   brand: string;
   model: string;
   year: number;
-  price: number | null; // null means "Request Price"
+  price: number | null; // null means price is unavailable (show as "N/A")
   fuelType: FuelType;
   transmission: TransmissionType;
   kmDriven?: number; // only for pre-owned
@@ -45,11 +45,18 @@ export const BUDGET_RANGES = [
   { label: "Above ₹30 Lakh", min: 3000000, max: Infinity },
 ] as const;
 
-export function formatPrice(price: number | null): string {
-  if (price === null) return "Request Price";
-  if (price >= 10000000) return `₹${(price / 10000000).toFixed(2)} Cr`;
-  if (price >= 100000) return `₹${(price / 100000).toFixed(2)} Lakh`;
-  return `₹${price.toLocaleString("en-IN")}`;
+interface FormatPriceOptions {
+  startingPrice?: boolean;
+}
+
+export function formatPrice(price: number | null, options?: FormatPriceOptions): string {
+  if (price === null) return "N/A";
+
+  const startingSuffix = options?.startingPrice ? "* onwards" : "";
+
+  if (price >= 10000000) return `₹${(price / 10000000).toFixed(2)} Cr${startingSuffix}`;
+  if (price >= 100000) return `₹${(price / 100000).toFixed(2)} Lakh${startingSuffix}`;
+  return `₹${price.toLocaleString("en-IN")}${startingSuffix}`;
 }
 
 export function formatKm(km: number): string {

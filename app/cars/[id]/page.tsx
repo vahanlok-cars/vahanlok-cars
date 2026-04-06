@@ -82,9 +82,9 @@ export default async function CarDetailPage({ params }: PageProps) {
               Home
             </Link>
             <span>/</span>
-            <a href="/cars" className="hover:text-[#D72828]">
+            <Link href="/cars" className="hover:text-[#D72828]">
               Cars
-            </a>
+            </Link>
             <span>/</span>
             <span className="text-[#1A1A1A] font-medium truncate">
               {carLabel}
@@ -114,7 +114,7 @@ export default async function CarDetailPage({ params }: PageProps) {
                   {carLabel}
                 </h1>
                 <p className="text-2xl font-bold text-[#D72828] mt-2">
-                  {formatPrice(car.price)}
+                  {formatPrice(car.price, { startingPrice: true })}
                 </p>
               </div>
 

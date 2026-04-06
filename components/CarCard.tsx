@@ -70,7 +70,7 @@ export default function CarCard({ car }: CarCardProps) {
 
         {/* Price */}
         <p className="text-lg font-bold text-[#D72828] mb-4">
-          {formatPrice(car.price)}
+          {formatPrice(car.price, { startingPrice: true })}
         </p>
 
         {/* CTA */}
