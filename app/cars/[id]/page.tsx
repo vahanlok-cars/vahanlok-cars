@@ -22,9 +22,9 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { id } = await params;
   const car = getCarById(id);
-  if (!car) return { title: "Car Not Found — AB Cars" };
+  if (!car) return { title: "Car Not Found — Vahanlok" };
   return {
-    title: `${car.brand} ${car.model} (${car.year}) — AB Cars`,
+    title: `${car.brand} ${car.model} (${car.year}) — Vahanlok`,
     description: `${car.type === "new" ? "Brand new" : "Pre-owned"} ${car.brand} ${car.model} ${car.year} for ${formatPrice(car.price)}. ${car.fuelType} · ${car.transmission}.`,
   };
 }

@@ -2,7 +2,7 @@
 export const WHATSAPP_NUMBER = "919930503688"; // +91-9930503688
 
 export const BUSINESS = {
-  name: "AB Cars",
+  name: "Vahanlok",
   tagline: "Find Your Perfect Ride",
   location: "Mumbai, Maharashtra",
   phone: "+91-99305 03688",
@@ -15,7 +15,7 @@ export function buildWhatsAppUrl(message: string): string {
 
 export function buildDefaultWhatsAppUrl(carName?: string): string {
   const message = carName
-    ? `Hi AB Cars! I'm interested in the ${carName}. Please share more details.`
-    : "Hi AB Cars! I'm looking to buy a car. Can you help me?";
+    ? `Hi Vahanlok! I'm interested in the ${carName}. Please share more details.`
+    : "Hi Vahanlok! I'm looking to buy a car. Can you help me?";
   return buildWhatsAppUrl(message);
 }

@@ -12,10 +12,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AB Cars — New & Pre-Owned Cars in Mumbai",
+  title: "Vahanlok — New & Pre-Owned Cars in Mumbai",
   description:
-    "Find your perfect car at AB Cars. Browse new and pre-owned cars in Mumbai. Get the best deal directly via WhatsApp.",
-  keywords: ["car dealership", "Mumbai cars", "new cars", "pre-owned cars", "AB Cars"],
+    "Find your perfect car at Vahanlok. Browse new and pre-owned cars in Mumbai. Get the best deal directly via WhatsApp.",
+  keywords: [
+    "car dealership",
+    "Mumbai cars",
+    "new cars",
+    "pre-owned cars",
+    "Vahanlok",
+    "best car deals",
+    "WhatsApp car sales",
+    "car buying in Mumbai",
+  ],
 };
 
 export default function RootLayout({
@@ -25,7 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased bg-white text-[#1A1A1A] font-sans`}>
+      <body
+        className={`${inter.variable} antialiased bg-white text-[#1A1A1A] font-sans`}
+      >
         <Header />
         {children}
         <Footer />

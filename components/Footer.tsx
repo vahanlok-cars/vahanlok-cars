@@ -104,7 +104,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 mt-10 pt-6 text-center">
           <p className="text-gray-500 text-xs">
-            &copy; {new Date().getFullYear()} AB Cars. All rights reserved.
+            &copy; {new Date().getFullYear()} Vahanlok. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,12 +1,12 @@
-# 🚗 AB Cars — Website Build Prompt
+# 🚗 Vahanlok — Website Build Prompt
 
 ## Project Overview
-Build a **lead generation website** for **AB Cars**, an Indian car dealership selling both new and pre-owned cars. The primary goal of the website is to capture buyer leads and route them directly to a sales agent via **WhatsApp**. The design should feel **clean, minimal, white, and professional** — think of it like a premium but approachable showroom experience online.
+Build a **lead generation website** for **Vahanlok**, an Indian car dealership selling both new and pre-owned cars. The primary goal of the website is to capture buyer leads and route them directly to a sales agent via **WhatsApp**. The design should feel **clean, minimal, white, and professional** — think of it like a premium but approachable showroom experience online.
 
 ---
 
 ## Brand & Identity
-- **Business Name:** AB Cars
+- **Business Name:** Vahanlok
 - **Target Market:** India (use INR ₹ for pricing, Indian mobile number format +91-XXXXX-XXXXX)
 - **Primary CTA:** Get the Best Deal via WhatsApp
 - **Tone:** Trustworthy, professional, no-clutter
@@ -27,7 +27,7 @@ Build a **lead generation website** for **AB Cars**, an Indian car dealership se
 ### 1. Homepage
 - Hero section with a strong headline like *"Find Your Perfect Car — New or Pre-Owned"*
 - Two large CTA cards prominently placed: **New Cars** and **Pre-Owned Cars** — clicking either filters the car listings below
-- A sticky **WhatsApp chat button** (bottom-right corner) that is always visible across all pages, linking to the sales agent's WhatsApp with a pre-filled message like: *"Hi AB Cars! I'm interested in buying a car."*
+- A sticky **WhatsApp chat button** (bottom-right corner) that is always visible across all pages, linking to the sales agent's WhatsApp with a pre-filled message like: *"Hi Vahanlok! I'm interested in buying a car."*
 - Brief trust section: number of cars available, years in business, happy customers (placeholder stats)
 - Footer with contact details, location, and WhatsApp link
 
@@ -75,7 +75,7 @@ This form appears on every individual car detail page and should also be accessi
 - Validate all required fields
 - Construct a WhatsApp message in this format and open it via `https://wa.me/91XXXXXXXXXX?text=...`:
 ```
-🚗 New Lead from AB Cars Website
+🚗 New Lead from Vahanlok Website
 
 Car Interested In: [Car Model]
 Name: [Name]

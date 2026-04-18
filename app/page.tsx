@@ -31,8 +31,10 @@ export default function HomePage() {
               <span className="text-[#D72828]">New or Pre-Owned</span>
             </h1>
             <p className="text-gray-300 text-lg sm:text-xl mb-10 max-w-xl leading-relaxed">
-              Get the best deal on your dream car. We connect you directly with
-              our team via WhatsApp for instant quotes and zero hassle.
+              Discover the best deals on your next vehicle with ease. We connect
+              you directly with our team through WhatsApp, allowing you to get
+              instant quotes, expert guidance, and a smooth, hassle-free buying
+              experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button size="lg" asChild>
@@ -46,7 +48,7 @@ export default function HomePage() {
                 variant="outline"
                 onClick={() => {
                   const url = buildWhatsAppUrl(
-                    "Hi AB Cars! I'm interested in buying a car",
+                    "Hi Vahanlok! I'm interested in buying a car",
                   );
 
                   window.open(url, "_blank");
@@ -182,7 +184,7 @@ export default function HomePage() {
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-bold text-[#1A1A1A] text-center mb-12">
-            Why Buy From AB Cars?
+            Why Buy From Vahanlok?
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {[

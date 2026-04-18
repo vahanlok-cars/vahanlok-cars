@@ -58,7 +58,7 @@ export default function LeadForm({ carModel }: LeadFormProps) {
 
   function onSubmit(data: FormData) {
     const lines = [
-      "Hello AB Cars! I have an enquiry regarding a car. Here are my details:",
+      "Hello Vahanlok! I have an enquiry regarding a car. Here are my details:",
       "",
       `Car Interested In: ${data.carModel}`,
       `Name: ${data.name}`,

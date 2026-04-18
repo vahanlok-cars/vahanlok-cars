@@ -4,7 +4,7 @@ import { getAllCars } from "@/lib/cars";
 import CarsClient from "./CarsClient";
 
 export const metadata: Metadata = {
-  title: "Cars for Sale — AB Cars Mumbai",
+  title: "Cars for Sale — Vahanlok Mumbai",
   description:
     "Browse our full inventory of new and certified pre-owned cars. Filter by brand, fuel type, and budget.",
 };
