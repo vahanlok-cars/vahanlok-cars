@@ -22,10 +22,46 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const { id } = await params;
   const car = getCarById(id);
+
   if (!car) return { title: "Car Not Found — Vahanlok" };
+
+  const title = `${car.brand} ${car.model} (${car.year}) — Vahanlok`;
+  const description = `${car.type === "new" ? "Brand new" : "Pre-owned"} ${car.brand} ${car.model} ${car.year} for ${formatPrice(car.price)}. ${car.fuelType} · ${car.transmission}.`;
+  const image = car.images[0] ? encodeURI(car.images[0]) : "/thumbnail.png";
+  const pageUrl = `/cars/${car.id}`;
+
   return {
-    title: `${car.brand} ${car.model} (${car.year}) — Vahanlok`,
-    description: `${car.type === "new" ? "Brand new" : "Pre-owned"} ${car.brand} ${car.model} ${car.year} for ${formatPrice(car.price)}. ${car.fuelType} · ${car.transmission}.`,
+    title,
+    description,
+    keywords: [
+      car.brand,
+      car.model,
+      `${car.brand} ${car.model}`,
+      `${car.type} car in Mumbai`,
+      `${car.fuelType} ${car.transmission}`,
+      "Vahanlok",
+    ],
+    alternates: {
+      canonical: pageUrl,
+    },
+    openGraph: {
+      type: "website",
+      url: pageUrl,
+      title,
+      description,
+      images: [
+        {
+          url: image,
+          alt: `${car.brand} ${car.model}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
   };
 }
 

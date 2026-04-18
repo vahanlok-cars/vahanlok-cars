@@ -6,7 +6,7 @@ export const BUSINESS = {
   tagline: "Find Your Perfect Ride",
   location: "Mumbai, Maharashtra",
   phone: "+91-99305 03688",
-  email: "info@abcars.in",
+  email: `info@${process.env.NEXT_PUBLIC_SITE_URL?.replace(/^https?:\/\//, "") || "vahanlok-cars.vercel.app"}`,
 } as const;
 
 export function buildWhatsAppUrl(message: string): string {

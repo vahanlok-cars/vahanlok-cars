@@ -7,6 +7,31 @@ export const metadata: Metadata = {
   title: "Cars for Sale — Vahanlok Mumbai",
   description:
     "Browse our full inventory of new and certified pre-owned cars. Filter by brand, fuel type, and budget.",
+  alternates: {
+    canonical: "/cars",
+  },
+  openGraph: {
+    type: "website",
+    url: "/cars",
+    title: "Cars for Sale — Vahanlok Mumbai",
+    description:
+      "Browse our full inventory of new and certified pre-owned cars. Filter by brand, fuel type, and budget.",
+    images: [
+      {
+        url: "/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "Cars for Sale at Vahanlok",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cars for Sale — Vahanlok Mumbai",
+    description:
+      "Browse our full inventory of new and certified pre-owned cars. Filter by brand, fuel type, and budget.",
+    images: ["/thumbnail.png"],
+  },
 };
 
 interface PageProps {
